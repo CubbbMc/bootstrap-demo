@@ -121,6 +121,64 @@
         </div>
         </div>
     </div>
+<section>
+    <!--Inicio sidebar-->
+<div class="d-flex" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Información pendiente">
+  <button class="btn btn-primary text-white" style="position: fixed !important; top: 50% !important; right: 0 !important; transform: translateY(-50%) !important; z-index: 9999 !important; border-radius: 5px 0 0 5px; box-shadow: -2px 2px 10px rgba(0,0,0,0.2);" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+  Déjanos tus datos
+</button>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Nos contactaremos contigo</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+     <!--Formulario inicio-->
+    <form>
+      <!-- Campo: Nombre -->
+      <div class="mb-3">
+        <label for="inputName" class="form-label">Nombre completo</label>
+        <input type="text" class="form-control" id="inputName" placeholder="Juan Pérez" required>
+      </div>
+
+      <!-- Campo: Email -->
+      <div class="mb-3">
+        <label for="inputEmail" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="nombre@ejemplo.com" required>
+      </div>
+
+     <!-- Campo: Comentarios (Textarea) -->
+      <div class="mb-3">
+        <label for="textNotes" class="form-label">Motivo de la consulta</label>
+        <textarea class="form-control" id="textNotes" rows="3"></textarea>
+      </div>
+
+      <!-- Checkbox de términos -->
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="checkTerms">
+        <label class="form-check-label" for="checkTerms">Acepto los términos y condiciones</label>
+      </div>
+
+      <!-- Botones de acción -->
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">Cancelar</button>
+      </div>
+    </form>
+    <!-- El formulario termina aquí -->
+
+  </div>
+</div>
+<!-- fin sidebar -->
+
+  
+  <!--tooltips-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
